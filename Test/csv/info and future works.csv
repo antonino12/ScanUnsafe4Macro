@@ -1,0 +1,13 @@
+INFO,,
+overall strategy,"block data stream and serialization, allow the file system carefully",
+,"/, \, forbiden. Any save to path action must be done through: ",use sim.getSessionPath()
+,make sure the macro can't print the path of the simulation or the macro,https://steve.cd-adapco.com/articles/en_US/FAQ/How-can-I-get-the-path-of-my-simulation-in-a-Java-macro
+source ,https://docs.oracle.com/javase/8/docs/api/,
+,,
+FUTURE WORKS,,
+check if java.lang.SecurityManager could be used to lock everything macros do to a partition. We could use a snippet to be copied and pasted in all customer macros.,,
+,,
+really dangerous ,,
+import java.lang.ProcessBuilder.* ,Process,
+import java.lang.Process.*,Runtime,
+import java.lang.System.*,Serializable,
